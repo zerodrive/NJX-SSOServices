@@ -16,7 +16,7 @@ We assume for this example that the web applications are deployed on a Tomcat se
 
 Web application AppA gets a customized Logon page. This Logon page has an adapter listener that encrypts the entered credentials with the public key of a previously created key pair and stores the encrypted value in the session context.
 
-When a page PageA in application AppA needs to load a page PageB from a second application AppB. PageA gets an adapter listener that reads the encrypted credentials from the session context, creates a temporary access token with a very short life span and passes this token to the Natural program that handles PageA. This Natural program can then add the access token to the URL of PageB and load the page.
+When a page PageA in application AppA needs to load a page PageB from a second application AppB, PageA gets an adapter listener that reads the encrypted credentials from the session context, creates a temporary access token with a very short life span and passes this token to the Natural program that handles PageA. This Natural program can then add the access token to the URL of PageB and load the page.
 
 On the side of AppB a servlet filter decrypts the access token with the private key and passes the credentials to the Logon page of AppB. The Logon page accepts the credentials and loads PageB without further logon. 
 
