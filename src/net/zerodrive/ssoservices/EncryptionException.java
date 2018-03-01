@@ -11,14 +11,14 @@ package net.zerodrive.ssoservices;
 
 public class EncryptionException extends Exception {
 
-	private static final long serialVersionUID = 2106102696353110983L;
+    private static final long serialVersionUID = 2106102696353110983L;
 
-	public EncryptionException(String message) {
-		super(message);
-	}
+    public EncryptionException(String message) {
+        super(message);
+    }
 
-	public EncryptionException(String message, Throwable cause) {
-		super(message, cause);
-	}
+    public EncryptionException(String message, Throwable cause) {
+        super(message, cause);
+    }
 
 }
